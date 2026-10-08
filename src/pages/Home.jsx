@@ -1,87 +1,206 @@
 import React from "react";
 import { LuShoppingCart } from "react-icons/lu";
 import Layout from "../layouts/Layout";
+import PopularCategories from "../common/PopularCategories";
+import Image1 from "../assets/images/1771592080.webp";
+import Hero from "../common/Hero";
 import { Link } from "react-router-dom";
-import Banner from "../assets/images/1771424960.jpg";
+import Image from "../assets/images/1771592556.jpg";
+import { FaStar } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <Layout>
-      {/* Hero */}
-      <div className="bg-linear-to-r from-orange-50 to-red-50 py-16">
-        <div className="max-w-7xl mx-auto px-5   lg:px-8 ">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
-            {/* Left Box */}
-            <div>
-              <span className="text-orange-600 font-bold text-lg tracking-wider uppercase">
-                WELCOME TO CRAVE KART
-              </span>
+    <>
+      <Layout>
+        {/* Hero */}
+        <Hero />
 
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mt-3 leading-tight">
-                Discover Delicious <br />
-                <span className="text-orange-500">Food Experience</span>
-              </h1>
+        {/* categoty */}
+        <PopularCategories />
 
-              <p className="text-gray-600 text-lg mt-5 max-w-xl">
-                Order your favorite meals from the best restaurants and enjoy
-                delicious food at your doorstep.
-              </p>
+        <div className="max-w-7xl mx-auto px-5   lg:px-8 py-10">
+          <h2 className="text-gray-900 text-3xl font-semibold mb-3">
+            Popular Dish
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima at
+            ipsum quos eligendi beatae expedita qui. Provident natus, quia harum
+            placeat obcaecati illum ad suscipit, praesentium doloribus corporis
+            aut est.
+          </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 pt-4 mt-5">
-                {/* Order Now */}
-                <Link
-                  to="/cart"
-                  className="bg-gradient-to-r from-orange-500 to-red-500
-                  hover:from-orange-600 hover:to-red-600
-                  text-white font-semibold py-3 px-8 rounded-lg
-                  shadow-lg hover:shadow-xl transition-all duration-300
-                  flex items-center justify-center gap-2"
-                >
-                  <span>Order Now</span>
-                  <LuShoppingCart size={20} />
-                </Link>
-
-                {/* View Menu */}
-                <Link
-                  to="/menu"
-                  className="border-2 border-orange-500 text-orange-600
-                  hover:bg-orange-50 font-semibold py-3 px-8 rounded-lg
-                  transition-all duration-300
-                  flex items-center justify-center"
-                >
-                  View Menu
-                </Link>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+            {/* cart1 */}
+            <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              {/* Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={Image}
+                  alt="Pizza"
+                  className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
-              <div className="flex gap-8 pt-6 items-center">
-                <div>
-                  <p className="text-3xl font-bold text-orange-600">500+</p>
-                  <p className="text-gray-600 text-sm">Delicious Dishes</p>
+              {/* Content */}
+              <div className="p-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h2 className="font-semibold text-lg text-gray-800">
+                      Pizza
+                    </h2>
+
+                    <p className="text-gray-500 text-sm mt-1">Good for taste</p>
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center gap-1 text-yellow-400 text-sm">
+                    <FaStar />
+                    <span className="text-gray-600">4.5</span>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-3xl font-bold text-red-500">4.9★</p>
-                  <p className="text-gray-600 text-sm">Customer Rating</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-orange-600">24/7</p>
-                  <p className="text-gray-600 text-sm">Fast Delivery</p>
+
+                {/* Bottom */}
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-orange-500 font-bold text-xl">₹59</span>
+
+                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                    Add
+                  </button>
                 </div>
               </div>
             </div>
 
-            {/* Right Column - Image */}
-            <div className="relative">
-              <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur-xl opacity-30"></div>
-              <img
-                src={Banner}
-                alt="Delicious Food"
-                className="relative max-h-130 rounded-2xl shadow-2xl w-full h-auto object-cover"
-              />
+
+              {/* cart2 */}
+             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              {/* Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={Image}
+                  alt="Pizza"
+                  className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h2 className="font-semibold text-lg text-gray-800">
+                      Pizza
+                    </h2>
+
+                    <p className="text-gray-500 text-sm mt-1">Good for taste</p>
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center gap-1 text-yellow-400 text-sm">
+                    <FaStar />
+                    <span className="text-gray-600">4.5</span>
+                  </div>
+                </div>
+
+                {/* Bottom */}
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-orange-500 font-bold text-xl">₹59</span>
+
+                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                    Add
+                  </button>
+                </div>
+              </div>
             </div>
+
+
+              {/* cart3 */}
+             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              {/* Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={Image}
+                  alt="Pizza"
+                  className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h2 className="font-semibold text-lg text-gray-800">
+                      Pizza
+                    </h2>
+
+                    <p className="text-gray-500 text-sm mt-1">Good for taste</p>
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center gap-1 text-yellow-400 text-sm">
+                    <FaStar />
+                    <span className="text-gray-600">4.5</span>
+                  </div>
+                </div>
+
+                {/* Bottom */}
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-orange-500 font-bold text-xl">₹59</span>
+
+                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+              {/* cart4 */}
+             <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+              {/* Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={Image}
+                  alt="Pizza"
+                  className="h-48 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-4">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <h2 className="font-semibold text-lg text-gray-800">
+                      Pizza
+                    </h2>
+
+                    <p className="text-gray-500 text-sm mt-1">Good for taste</p>
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center gap-1 text-yellow-400 text-sm">
+                    <FaStar />
+                    <span className="text-gray-600">4.5</span>
+                  </div>
+                </div>
+
+                {/* Bottom */}
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-orange-500 font-bold text-xl">₹59</span>
+
+                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                    Add
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
+
+          
+
+
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 

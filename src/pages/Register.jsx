@@ -65,18 +65,7 @@ const Register = () => {
               </div>
 
               {/* Phone */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Phone Number
-                </label>
-
-                <input
-                  type="tel"
-                  placeholder="Enter your phone number"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition"
-                />
-              </div>
+             
 
               {/* Password */}
               <div>
@@ -103,28 +92,7 @@ const Register = () => {
               </div>
 
               {/* Confirm Password */}
-              <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
-                  Confirm Password
-                </label>
-
-                <div className="relative">
-                  <input
-                    type={showConfirmPassword ? "text" : "password"}
-                    placeholder="Confirm your password"
-                    required
-                    className="w-full px-4 py-3 pr-12 border border-gray-300 rounded-lg outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition"
-                  />
-
-                  <button
-                    type="button"
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-orange-500"
-                  >
-                    {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
-                  </button>
-                </div>
-              </div>
+              
 
               {/* Terms */}
               <div className="flex items-start gap-2 pt-1">
