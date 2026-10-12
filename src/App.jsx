@@ -12,6 +12,7 @@ import ContactUs from "./pages/ContactUs";
 
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
+import MyOrders from "./pages/account/MyOrders";
 
 function App() {
   const location = useLocation();
@@ -37,6 +38,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/account/my-orders" element={<MyOrders />} />
         </Routes>
       </main>
 

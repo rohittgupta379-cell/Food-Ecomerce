@@ -1,19 +1,3 @@
-// import React from 'react'
-import Layout from '../layouts/Layout'
-
-// const Login = () => {
-//   return (
-//     <>
-//     <Layout>
-//      
-//     </Layout>
-//     </>
-//   )
-// }
-
-// export default Login
-
-
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaUtensils } from "react-icons/fa";
