@@ -9,25 +9,28 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
-
+import { Toaster } from "react-hot-toast";
 import Header from "./layouts/Header";
-import Footer from "./layouts/Footer";
 import MyOrders from "./pages/account/MyOrders";
+import AdminLogin from "./pages/admin/AdminLogin";
+import Dashboard from "./pages/admin/Dashboard";
+import { AdminAuthProvider } from "./context/AdminAuth";
+import AdminGuest from "./common/AdminGuest";
+import RequireAdmin from "./common/RequireAdmin";
 
 function App() {
   const location = useLocation();
 
-  // Login and Register pages
   const hideLayout =
     location.pathname === "/login" ||
-    location.pathname === "/register";
+    location.pathname === "/register" ||
+    location.pathname === "/admin/login" ||
+    location.pathname === "/admin/dashboard";
 
   return (
-    <>
-      {/* Header */}
+    <AdminAuthProvider>
       {!hideLayout && <Header />}
 
-      {/* Main Content */}
       <main className={!hideLayout ? "flex-1 pt-[70px]" : ""}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -39,12 +42,28 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/account/my-orders" element={<MyOrders />} />
-        </Routes>
-      </main>
 
-      {/* Footer */}
-      {/* {!hideLayout && <Footer />} */}
-    </>
+          <Route
+            path="/admin/login"
+            element={
+              <AdminGuest>
+                <AdminLogin />
+              </AdminGuest>
+            }
+          />
+          <Route
+            path="/admin/dashboard"
+            element={
+              <RequireAdmin>
+                <Dashboard />
+              </RequireAdmin>
+            }
+          />
+        </Routes>
+
+        <Toaster position="top-center" reverseOrder={false} />
+      </main>
+    </AdminAuthProvider>
   );
 }
 
